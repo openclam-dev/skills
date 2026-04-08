@@ -64,43 +64,24 @@ npx skillkit install openclam-dev/skills --list
 
 ### Option 5: Clone and copy
 
-Manual install for any runtime that reads `SKILL.md` files from a directory:
+Clone the entire repo and copy the skills folder:
 
 ```bash
-git clone https://github.com/openclam-dev/skills.git /tmp/openclam-skills
-
-# Claude Code (global)
-mkdir -p ~/.claude/skills
-cp -R /tmp/openclam-skills/skills/* ~/.claude/skills/
-
-# Codex
-mkdir -p ~/.codex/skills
-cp -R /tmp/openclam-skills/skills/* ~/.codex/skills/
-
-# Gemini CLI
-mkdir -p ~/.gemini/skills
-cp -R /tmp/openclam-skills/skills/* ~/.gemini/skills/
-
-# OpenCode
-mkdir -p "${XDG_CONFIG_HOME:-$HOME/.config}/opencode/skills"
-cp -R /tmp/openclam-skills/skills/* "${XDG_CONFIG_HOME:-$HOME/.config}/opencode/skills/"
-
-# OpenClaw
-mkdir -p ~/.openclaw/skills
-cp -R /tmp/openclam-skills/skills/* ~/.openclaw/skills/
+git clone https://github.com/openclam-dev/skills.git
+cp -r skills/skills/* .agents/skills/
 ```
+
+Substitute `.agents/skills/` with whichever directory your runtime reads (`~/.claude/skills/`, `~/.codex/skills/`, `~/.gemini/skills/`, etc.).
 
 ### Option 6: Git submodule
 
-Pin a specific version of the skills as a submodule of your project:
+Add as a submodule for easy updates:
 
 ```bash
 git submodule add https://github.com/openclam-dev/skills.git .agents/openclam-skills
-ln -s .agents/openclam-skills/skills/openclam-cli .claude/skills/openclam-cli
-ln -s .agents/openclam-skills/skills/openclam-build-extension .claude/skills/openclam-build-extension
 ```
 
-Update with `git submodule update --remote .agents/openclam-skills`.
+Then reference skills from `.agents/openclam-skills/skills/`. Update with `git submodule update --remote .agents/openclam-skills`.
 
 ## Usage
 
