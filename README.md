@@ -46,10 +46,10 @@ Skills become invokable as `/openclam:openclam-cli` and `/openclam:openclam-buil
 The open-source [`skills` CLI](https://github.com/vercel-labs/skills) from Vercel works with any GitHub-hosted skill repo and supports a broad range of agent runtimes:
 
 ```bash
-npx skills add openclam-dev/skills                              # install everything
-npx skills add openclam-dev/skills --skill openclam-cli         # one specific skill
-npx skills check                                                # see what's installed
-npx skills update                                               # pull updates
+npx skills add https://github.com/openclam-dev/skills                          # install everything
+npx skills add https://github.com/openclam-dev/skills --skill openclam-cli     # one specific skill
+npx skills check                                                               # see what's installed
+npx skills update                                                              # pull updates
 ```
 
 ### Option 4: SkillKit (multi-agent installer)
