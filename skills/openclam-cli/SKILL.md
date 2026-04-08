@@ -8,7 +8,7 @@ description: >
   adding features, or understanding the codebase.
 metadata:
   author: openclam
-  version: 0.7.0
+  version: 0.1.0
 tags:
   - cli
   - architecture

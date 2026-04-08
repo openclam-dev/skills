@@ -1,0 +1,18 @@
+{
+  "name": "openclam",
+  "description": "Reference skills for the OpenClam CLI and extension authoring",
+  "version": "0.1.0",
+  "author": {
+    "name": "OpenClam",
+    "email": "hello@openclam.dev"
+  },
+  "homepage": "https://github.com/openclam-dev/skills",
+  "repository": "https://github.com/openclam-dev/skills",
+  "license": "MIT",
+  "keywords": [
+    "openclam",
+    "cli",
+    "extensions",
+    "agent-skills"
+  ]
+}

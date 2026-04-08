@@ -1,0 +1,32 @@
+{
+  "name": "openclam-skills",
+  "owner": {
+    "name": "OpenClam",
+    "email": "hello@openclam.dev"
+  },
+  "metadata": {
+    "description": "Official OpenClam skills for AI coding agents — CLI reference, extension authoring, and execution-layer patterns",
+    "version": "0.1.0"
+  },
+  "plugins": [
+    {
+      "name": "openclam",
+      "source": "./",
+      "description": "Reference skills for the OpenClam CLI and extension authoring",
+      "version": "0.1.0",
+      "author": {
+        "name": "OpenClam",
+        "email": "hello@openclam.dev"
+      },
+      "homepage": "https://github.com/openclam-dev/skills",
+      "repository": "https://github.com/openclam-dev/skills",
+      "license": "MIT",
+      "keywords": [
+        "openclam",
+        "cli",
+        "extensions",
+        "agent-skills"
+      ]
+    }
+  ]
+}
