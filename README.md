@@ -12,8 +12,7 @@ Without these skills, your agent guesses from whatever scraps of OpenClam appear
 
 | Skill | Description |
 |---|---|
-| [openclam-cli](./skills/openclam-cli) | Reference for the OpenClam CLI — setup, workspaces, contacts, deals, tasks, messaging, marketing, content, calendar, research, storage, tickets, wiki, the execution layer (events, rules, actions, workflows, cron, webhooks), and cross-cutting patterns |
-| [openclam-build-extension](./skills/openclam-build-extension) | Build custom OpenClam extensions — scaffolding, schema design, service patterns, routes, commands, migrations, and lifecycle |
+| [openclam](./skills/openclam) | Complete reference for OpenClam across all four surfaces (CLI, MCP, HTTP API, typed client). Covers operating the system (workspace, auth, contacts, deals, tasks, content, calendar, research, storage, tickets, wiki, ICP, queries), automating it (events, rules, schedule, functions, workflows, webhooks), extending it (`@openclam/extension-sdk`), and first-time setup (daemon, AI providers, secrets, skills, MCP) |
 
 ## Installation
 
@@ -39,17 +38,17 @@ If you use Claude Code, the official plugin marketplace is the cleanest install:
 /plugin install openclam@openclam-skills
 ```
 
-Skills become invokable as `/openclam:openclam-cli` and `/openclam:openclam-build-extension`. Updates ship automatically when you `/plugin update openclam`.
+The skill becomes invokable as `/openclam:openclam`. Updates ship automatically when you `/plugin update openclam`.
 
 ### Option 3: `npx skills`
 
 The open-source [`skills` CLI](https://github.com/vercel-labs/skills) from Vercel works with any GitHub-hosted skill repo and supports a broad range of agent runtimes:
 
 ```bash
-npx skills add https://github.com/openclam-dev/skills                          # install everything
-npx skills add https://github.com/openclam-dev/skills --skill openclam-cli     # one specific skill
-npx skills check                                                               # see what's installed
-npx skills update                                                              # pull updates
+npx skills add https://github.com/openclam-dev/skills                      # install everything
+npx skills add https://github.com/openclam-dev/skills --skill openclam     # one specific skill
+npx skills check                                                           # see what's installed
+npx skills update                                                          # pull updates
 ```
 
 ### Option 4: SkillKit (multi-agent installer)
@@ -58,7 +57,7 @@ npx skills update                                                              #
 
 ```bash
 npx skillkit install openclam-dev/skills
-npx skillkit install openclam-dev/skills --skill openclam-cli
+npx skillkit install openclam-dev/skills --skill openclam
 npx skillkit install openclam-dev/skills --list
 ```
 
@@ -93,11 +92,11 @@ Once installed, just ask your agent to do something OpenClam-related and it will
 
 > "Wire a rule that sends a Slack message whenever a deal is moved to the 'Won' stage."
 
-If you prefer explicit invocation, slash commands also work:
+If you prefer explicit invocation, the slash command also works:
 
 ```
-/openclam-cli   how do I export contacts to CSV?
-/openclam-build-extension   create a new extension called inventory
+/openclam   how do I export contacts to CSV?
+/openclam   create a new extension called inventory
 ```
 
 ## Verifying installation
@@ -126,7 +125,7 @@ With the Claude Code plugin:
 Manually:
 
 ```bash
-cd ~/.claude/skills/openclam-cli   # or wherever you installed
+cd ~/.claude/skills/openclam   # or wherever you installed
 git pull
 ```
 

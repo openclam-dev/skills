@@ -17,7 +17,7 @@ OpenClam skills use this frontmatter shape:
 
 ```yaml
 ---
-name: openclam-cli
+name: your-skill-name
 description: >
   Short, action-oriented description that tells an agent when to use this skill.
   Front-load the key use case in the first sentence.
@@ -57,12 +57,10 @@ Note: Claude Code itself only reads `name` and `description`. The `metadata` and
   marketplace.json     # Claude Code plugin marketplace catalog
   plugin.json          # Plugin manifest
 skills/
-  openclam-cli/
+  openclam/
     SKILL.md
     references/
       *.md
-  openclam-build-extension/
-    SKILL.md
 README.md
 LICENSE
 CONTRIBUTING.md        # this file
